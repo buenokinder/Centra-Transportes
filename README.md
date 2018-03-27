@@ -1,6 +1,6 @@
 **Authentication**
 ----
-  <_Para autenticarmos, precisamos ._>
+  <_EndPoint de Autenticação._>
 
 * **URL**
 
@@ -56,7 +56,7 @@
     
 **Buscar Competições**
 ----
-  <_Para autenticarmos, precisamos ._>
+  <_EndPoint para busca de competições ._>
 
 * **URL**
 
@@ -116,7 +116,7 @@
     
 **Buscar Jogos**
 ----
-  <_Para autenticarmos, precisamos ._>
+  <_EndPoint para busca de Jogos ._>
 
 * **URL**
 
@@ -181,7 +181,7 @@
 
 **Buscar Odds**
 ----
-  <_Para autenticarmos, precisamos ._>
+  <_EndPoint para busca das Odds ._>
 
 * **URL**
 
