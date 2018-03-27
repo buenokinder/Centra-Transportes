@@ -22,6 +22,12 @@
 | --- | --- |
 | **content-type** | application/x-www-form-urlencoded |
 
+* **Data Params**
+
+| Key | Value |
+| --- | --- |
+| **grant_type** | client_credentials |
+
 * **Success Response:**
 
   * **Code:** 200 <br />
@@ -35,8 +41,10 @@
 
   <_Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be._>
 
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "Log in" }`
+  * **Code:** 400 BAD REQUEST <br />
+    **Content:** `{
+    "error": "invalid_request"
+}`
 
   OR
 
@@ -69,7 +77,29 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** ``
+    **Content:** `{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "marketId": 1,
+            "name": "Benfica",
+            "odd": 320
+        },
+        {
+            "id": 2,
+            "marketId": 1,
+            "name": "Empate",
+            "odd": 220
+        },
+        {
+            "id": 3,
+            "marketId": 1,
+            "name": "Porto",
+            "odd": 170
+        }
+    ]
+}`
  
 * **Error Response:**
 
