@@ -60,12 +60,143 @@
 
 * **URL**
 
-  https://odds-api-issue-5-dev.casinoportugal.pt/api/competitions
+  https://odds-api-issue-5-dev.casinoportugal.pt/api/competitions/{id}
 
 * **Method:**
   
   `GET` 
   
+* **Uri Params**
+
+| Key | Value |
+| --- | --- |
+| **id** | Integer competition Id, using 1 to test |
+
+  
+* **Hearders Params**
+
+| Header | Value |
+| --- | --- |
+| **content-type** | application/x-www-form-urlencoded |
+| **Authorization** | Bearer + token |
+
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{
+    "success": true,
+    "data": {
+        "id": 1,
+        "name": "Liga Nós",
+        "fixtures": [
+            {
+                "id": 1,
+                "name": "Benfica v Porto",
+                "competionId": 1,
+                "sportId": 0,
+                "startTime": "0001-01-01T00:00:00"
+            },
+            {
+                "id": 2,
+                "name": "Sporting v Braga",
+                "competionId": 1,
+                "sportId": 0,
+                "startTime": "0001-01-01T00:00:00"
+            }
+        ]
+    }
+}`
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** ``
+    
+    
+**Buscar Jogos**
+----
+  <_Para autenticarmos, precisamos ._>
+
+* **URL**
+
+  https://odds-api-issue-5-dev.casinoportugal.pt/api/games/{id}
+
+* **Method:**
+  
+  `GET` 
+  
+* **Uri Params**
+
+| Key | Value |
+| --- | --- |
+| **id** | Integer game Id, using 1,2... to test |
+
+* **Hearders Params**
+
+| Header | Value |
+| --- | --- |
+| **content-type** | application/x-www-form-urlencoded |
+| **Authorization** | Bearer + token |
+
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{
+    "success": true,
+    "data": {
+        "id": 1,
+        "name": "Benfica v Porto",
+        "competionId": 1,
+        "sportId": 0,
+        "startTime": "0001-01-01T00:00:00",
+        "markets": [
+            {
+                "id": 1,
+                "typeId": 0,
+                "name": "Resultado do Jogo"
+            },
+            {
+                "id": 2,
+                "typeId": 0,
+                "name": "Resultado ao Intervalo"
+            },
+            {
+                "id": 3,
+                "typeId": 0,
+                "name": "Total de Golos Par Ou Impar"
+            }
+        ]
+    }
+}`
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** ``
+
+
+
+
+**Buscar Odds**
+----
+  <_Para autenticarmos, precisamos ._>
+
+* **URL**
+
+  https://odds-api-issue-5-dev.casinoportugal.pt/api/odds/{id}
+
+* **Method:**
+  
+  `GET` 
+  
+* **Uri Params**
+
+| Key | Value |
+| --- | --- |
+| **id** | Integer Odd Id, using 1,2... to test |
+
 * **Hearders Params**
 
 | Header | Value |
@@ -106,6 +237,5 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** ``
 
- 
 
 
